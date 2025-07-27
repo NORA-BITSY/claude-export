@@ -12,16 +12,26 @@ You can export the active Claude chat log directly from the browser console, ent
 
 **Supports the latest Claude web UI as of September 24, 2024.**
 
-## Usage
+## Quick Start
 
- 1. Navigate to [claude.ai](https://claude.ai).
- 2. Open the chat thread you'd like to export.
- 3. Open the browser console (how to open console: [Chrome](https://developer.chrome.com/docs/devtools/open), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/), [Safari](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/EnableWebInspector/EnableWebInspector.html))
- 4. Follow the below steps depending on which output type you'd like.
+> [!TIP]
+> **New to claude-export?** Check out our comprehensive guides:
+> - 📖 **[Installation Guide](./INSTALLATION.md)** - Detailed setup instructions for all users
+> - 👤 **[User Guide](./USER_GUIDE.md)** - Step-by-step usage instructions with examples
+
+### Simple 3-Step Process
+
+1. **Get the script**: Copy contents from [`/dist/`](./dist/) folder (choose `md.min.js`, `json.min.js`, or `image.min.js`)
+2. **Open Claude**: Navigate to [claude.ai](https://claude.ai) and open your conversation
+3. **Run export**: Open browser console (`F12`), paste script, press Enter
 
 > [!IMPORTANT]  
 > Always be careful when pasting code into the console. Only paste code from trusted sources, as it can be used to execute malicious code.
 > You can explore this repository and verify the code before pasting it into the console, or clone and build the code yourself.
+
+## Detailed Usage
+
+For complete instructions, see the **[User Guide](./USER_GUIDE.md)**. Below are quick examples for each export format:
 
 ### JSON
 
@@ -114,6 +124,38 @@ In this example, fetch sends a GET request to the specified URL (https://api.exa
 #### Example output (Image Export):
 ![alt text](./public/claude-export-example.png "claude-export Example Output")
 
+## Installation & Development
+
+### For Users (No Installation Required)
+The simplest way to use claude-export is with the pre-built scripts in the `/dist` folder. No installation needed!
+
+See the **[Installation Guide](./INSTALLATION.md)** for detailed instructions.
+
+### For Developers
+```bash
+# Clone the repository
+git clone https://github.com/ryanschiang/claude-export.git
+cd claude-export
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+```
+
+Built files will be generated in the `/dist` folder.
+
+For complete development setup instructions, see the **[Installation Guide](./INSTALLATION.md)**.
+
+## Browser Compatibility
+
+- ✅ **Chrome** 80+
+- ✅ **Firefox** 75+ 
+- ✅ **Safari** 13+
+- ✅ **Edge** 80+
+- ❌ **Internet Explorer** (not supported)
+
 ## Limitations
 
 This is a trivial implementation as Claude currently does not support sharing or exporting conversations. It may break with future changes.
@@ -123,6 +165,21 @@ It currently supports:
 - Lists
 - Code blocks
 - Tables
+
+## Support & Contributing
+
+### Getting Help
+- 📖 **Read the guides**: [Installation Guide](./INSTALLATION.md) | [User Guide](./USER_GUIDE.md)
+- 🐛 **Report issues**: [GitHub Issues](https://github.com/ryanschiang/claude-export/issues)
+- 💡 **Feature requests**: Create an issue with the "enhancement" label
+
+### Contributing
+We welcome contributions! Please:
+1. Fork the repository
+2. Follow the development setup in [Installation Guide](./INSTALLATION.md)
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
 ## Acknowledgements
 
